@@ -9,7 +9,7 @@ import bodyParser from 'body-parser'
 // import mongodb from 'mongodb'
 import mongoose from 'mongoose'
 // import { Customer, CustomerType } from './mongodb'
-import { Customer, CustomerType } from './mongoose'
+import { Customer, CustomerType } from './customer'
 import { Account, AccountType } from './account'
 import { Transaction, TransactionType } from './transaction'
 
