@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
-import moment from 'moment-timezone'
+// import moment from 'moment-timezone'
 
-const dateIndonesia = moment.tz(Date.now(), "Asia/Jakarta");
-console.log(dateIndonesia)
+// const dateIndonesia = moment.tz(Date.now(), "Asia/Jakarta");
+// console.log(dateIndonesia)
 
 export type TransactionType = {
     account_id: string
@@ -17,7 +17,7 @@ export type TransactionDocument = mongoose.Document & TransactionType
 const TransactionSchema = new mongoose.Schema({
     account_id: { type: String, required: true },
     amount: { type: String, required: true },
-    date: { type: Date, default: dateIndonesia, required: true },
+    date: { type: Date, default: Date.now, required: true },
     description: { type: String, required: true }
 })
 
